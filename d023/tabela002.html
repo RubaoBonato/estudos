@@ -13,6 +13,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;  /* fazer ficar fixo cabeçalho*/
         }
 
         th, td{
@@ -28,9 +29,28 @@
         }
 
         thead, tfoot{
-            background-color: gray;
+            background-color: #383838;
             color:white;
         }
+
+        thead > tr > th {  /* fazer ficar fixo cabeçalho*/
+            position: sticky;
+            top:-1px;
+            background-color: #383838;;
+        }
+
+/*
+feito zebrado
+tr:nth-child(2n)
+tr:nth-child(2n-1)
+ou tr:nth-child(odd) impar
+tr:nth-child(even) par
+*/
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgrey;
+        }
+
         td.num{
             text-align: right;
         }
@@ -85,7 +105,7 @@
                 <td class="num">3 519 049</td>
             </tr>
             <tr>
-                <td>Paraiba</td>
+                <td>Paraíba</td>
                 <td class="num">2 919 049</td>
             </tr>
             <tr>
@@ -109,23 +129,23 @@
                 <td class="num">1 719 049</td>
             </tr>
             <tr>
-                <td>São Paulo</td>
+                <td>Alagoas</td>
                 <td class="num">1 519 049</td>
             </tr>
             <tr>
-                <td>São Paulo</td>
+                <td>Piauí</td>
                 <td class="num">1 319 049</td>
             </tr>
             <tr>
-                <td>São Paulo</td>
+                <td>Goiais</td>
                 <td class="num">919 049</td>
             </tr>
             <tr>
-                <td>São Paulo</td>
+                <td>Amazonas</td>
                 <td class="num">519 049</td>
             </tr>
             <tr>
-                <td>São Paulo</td>
+                <td>Distrito Federal</td>
                 <td class="num">19 049</td>
             </tr>
 
